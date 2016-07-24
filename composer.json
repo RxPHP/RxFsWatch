@@ -1,0 +1,36 @@
+{
+  "name": "rx/fswatch",
+  "type": "library",
+  "description": "Library for monitoring file changes with RxPHP",
+  "keywords": [
+    "fswatch",
+    "child process",
+    "rxphp",
+    "reactivex",
+    "react",
+    "reactphp",
+    "rx.php"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "David Dan",
+      "email": "davidwdan@gmail.com",
+      "role": "Developer"
+    },
+    {
+      "name": "Matt Bonneau",
+      "email": "matt@bonneau.net",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Rx\\React\\": "src/"
+    }
+  },
+  "require": {
+    "voryx/event-loop": "^0.2.0",
+    "rx/child-process": "^0.0.1"
+  }
+}
