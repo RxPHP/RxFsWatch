@@ -31,6 +31,6 @@
   },
   "require": {
     "voryx/event-loop": "^0.2.0",
-    "rx/child-process": "^0.0.1"
+    "rx/child-process": "~0.0.2"
   }
 }
