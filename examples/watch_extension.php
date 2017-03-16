@@ -11,7 +11,7 @@ $touch = (new \Rx\React\ProcessSubject('echo hey > ' . __DIR__ . '/test.txt'))->
 
 $watch
     ->merge($touch)
-    ->subscribeCallback(function (WatchEvent $e) {
-        echo "file: ", $e->getFile(), PHP_EOL;
-        echo "event types: ", json_encode($e->getEvents()), PHP_EOL;
+    ->subscribe(function (WatchEvent $e) {
+        echo 'file: ', $e->getFile(), PHP_EOL;
+        echo 'event types: ', json_encode($e->getEvents()), PHP_EOL;
     });
