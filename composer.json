@@ -29,8 +29,19 @@
       "Rx\\React\\": "src/"
     }
   },
+  "autoload-dev": {
+    "psr-4": {
+      "Rx\\React\\Tests\\": "test/Rx",
+      "Rx\\": "vendor/reactivex/rxphp/test/Rx"
+    },
+    "files": [
+      "vendor/reactivex/rxphp/test/helper-functions.php"
+    ]
+  },
   "require": {
-    "rx/child-process": "dev-master",
-    "reactivex/rxphp": "2.x-dev"
+    "rx/child-process": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^5.7"
   }
 }

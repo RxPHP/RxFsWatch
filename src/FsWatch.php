@@ -13,9 +13,9 @@ class FsWatch extends Observable
     private $process;
     private $errors;
 
-    public function __construct($path, $options = null, LoopInterface $loop = null)
+    public function __construct(string $path, string $options = null, LoopInterface $loop = null)
     {
-        $cmd = "fswatch -xrn {$path} " . $options;
+        $cmd = "fswatch -xrn {$path} {$options}";
 
         $this->errors  = new Subject();
         $this->process = new ProcessSubject($cmd, $this->errors, null, null, [], $loop);
@@ -28,7 +28,7 @@ class FsWatch extends Observable
                 throw $ex;
             }))
             ->map(function ($data) {
-                list($file, $bitwise) = explode(" ", $data);
+                list($file, $bitwise) = explode(' ', $data);
                 return new WatchEvent($file, (int)$bitwise);
             })
             ->subscribe($observer);

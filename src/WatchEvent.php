@@ -24,7 +24,7 @@ class WatchEvent
     const LINK = 4096;
     const OVERFLOW = 8192;
 
-    public function __construct($file, $bitwise)
+    public function __construct(string $file, int $bitwise)
     {
         $this->bitwise = $bitwise;
         $this->file    = $file;
