@@ -9,10 +9,10 @@
         processIsolation="false"
         stopOnFailure="false"
         syntaxCheck="false"
-        bootstrap="tests/bootstrap.php">
+        bootstrap="test/bootstrap.php">
     <testsuites>
         <testsuite name="Rx/FsWatch Tests">
-            <directory>tests/</directory>
+            <directory>test/</directory>
         </testsuite>
     </testsuites>
 
